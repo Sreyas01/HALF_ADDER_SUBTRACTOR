@@ -34,8 +34,13 @@ Borrow = A’B
 Figure -02 HALF Subtractor
 
 **Truthtable**
-![389952436-32fbde31-a7ca-4f58-a779-667dee99fff4](https://github.com/user-attachments/assets/8d8a1735-a644-491e-a813-b34b0aa3de6c)
-![389952693-20beb433-8137-47e9-b7fe-ab7a3ee8e4c6](https://github.com/user-attachments/assets/54f878f0-be8a-4fd1-bfc6-a3970b80af25)
+
+![Half Adder](https://github.com/user-attachments/assets/3c68ce86-ddb4-4cee-9262-823764ed3133)
+
+![Half subtracter](https://github.com/user-attachments/assets/e5ea603d-4f69-431e-8d59-77475d9c0484)
+
+
+
 
 **Procedure**
 
@@ -51,32 +56,57 @@ Figure -02 HALF Subtractor
 
 
 **Program:**
-*Half_adder*
-module halfadd_top(a,b,sum,carry);
+
+/* Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
+
+Developed by:M.Sreyas
+
+RegisterNumber:24004091
+
+i)HALF ADDER
+
+module ha(a,b,sum,carry);
+
 input a,b;
-output sum,carry; 
- assign sum = a^b;
- assign carry = a & b;
+
+output sum,carry;
+
+assign sum= (a ^ b);
+
+assign carry= ( a & b);
+
 endmodule
 
-*Half_subtractor*
-module halfsub_top(a,b,D,Bo);
+ii)HALF SUBTRACTOR
+
+module hs(a,b,difference,borrow);
+
 input a,b;
-output D,Bo; // Outputs sum and carry for half adder:Outputs difference D,Borrow Bo for half subtractor
-assign D = a ^ b;
-  assign Bo = ~a & b;
+
+output difference,borrow;
+
+assign difference= (a ^ b);
+
+assign borrow= ( ~a & b);
+
 endmodule
 
-
-Developed by:Sreyas RegisterNumber:24004091
+*/
 
 **RTL Schematic**
-![389953090-4d899c6c-34ec-4064-bd7f-b0b984f92e2a](https://github.com/user-attachments/assets/24173978-353a-4170-b883-b509509254d2)
+
+![logic diagram](https://github.com/user-attachments/assets/37dc34e1-77da-4f58-a86b-3b00b20b0869)
+
+![logi diagram](https://github.com/user-attachments/assets/c32b525c-2a89-4ec4-abbf-7c3c93f1a804)
+
 
 
 **Output/TIMING Waveform**
-![389953156-3a6b5ccc-3e08-44e6-8cac-bb3336c85933](https://github.com/user-attachments/assets/a9c1d529-70f1-47d2-b499-10a90657b67a)
+
+![output](https://github.com/user-attachments/assets/9cddbdfb-a478-4082-bdfa-12d3cda94e2e)
+
+![output 2](https://github.com/user-attachments/assets/648c29b9-8004-4001-b7d7-fc1bb79d8242)
 
 
 **Result:**
-The code is excecuted successfully.
+Thus the Half adder and half subtractor are verified by using verilog programm.
